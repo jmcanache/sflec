@@ -1,0 +1,8 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(sflec.yirehcs\.com)(:80)? [NC]
+RewriteRule ^(.*) http://www.sflec.yirehcs.com/$1 [R=301,L]
+order deny,allow
